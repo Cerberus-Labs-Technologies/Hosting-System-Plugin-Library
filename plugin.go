@@ -1,5 +1,7 @@
 package Hosting_System_Plugin_Library
 
+import "log"
+
 type HostingPlugin struct {
 	Name      string
 	Listeners []HostingListener
@@ -11,6 +13,11 @@ type HostingPlugin struct {
 
 type HostingPluginLoader struct {
 	Plugins map[string]HostingPlugin
+}
+
+func RegisterPlugin(plugin HostingPlugin) HostingPlugin {
+	log.Println("Registering plugin: " + plugin.Name)
+	return plugin
 }
 
 type HostingPluginInterface interface {
