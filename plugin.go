@@ -2,7 +2,7 @@ package Hosting_System_Plugin_Library
 
 type HostingPlugin struct {
 	Name      string
-	Listeners []Listener
+	Listeners []HostingListener
 	Version   string
 	Author    string
 }
