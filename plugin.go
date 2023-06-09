@@ -15,5 +15,5 @@ type HostingPluginInterface interface {
 	GetName() string
 	GetVersion() string
 	GetAuthor() string
-	RegisterListeners() []Listener
+	RegisterListeners() []HostingListener
 }
