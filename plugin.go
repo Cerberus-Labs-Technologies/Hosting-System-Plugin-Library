@@ -1,17 +1,17 @@
 package Hosting_System_Plugin_Library
 
-type Plugin struct {
+type HostingPlugin struct {
 	Name      string
 	Listeners []Listener
 	Version   string
 	Author    string
 }
 
-type PluginLoader struct {
-	Plugins map[string]Plugin
+type HostingPluginLoader struct {
+	Plugins map[string]HostingPlugin
 }
 
-type PluginInterface interface {
+type HostingPluginInterface interface {
 	GetName() string
 	GetVersion() string
 	GetAuthor() string
