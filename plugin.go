@@ -5,6 +5,8 @@ type HostingPlugin struct {
 	Listeners []HostingListener
 	Version   string
 	Author    string
+	Load      func() error
+	Debug     func() error
 }
 
 type HostingPluginLoader struct {
