@@ -1,7 +1,9 @@
 package Hosting_System_Plugin_Library
 
+import "github.com/Cerberus-Labs-Technologies/Hosting-System-Plugin-Library/events"
+
 type HostingListener struct {
-	Name    string
+	Name    events.ServerEvent
 	Handler func() error
 }
 
@@ -11,7 +13,7 @@ type HostingListenerInterface interface {
 	Execute() error
 }
 
-func (hl *HostingListener) GetName() string {
+func (hl *HostingListener) GetName() events.ServerEvent {
 	return hl.Name
 }
 
